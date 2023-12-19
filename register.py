@@ -1,0 +1,20 @@
+from tkinter import *
+from PIL import ImageTk,Image
+#from tkinter import messagebox
+root=Tk()
+root.geometry("1400x750")
+root.configure(bg="#0F2167")
+root.title("Register page")
+label1=Label(root,text="Create Your Account",font=("Arial",28),bg="#0F2167",fg="#FFFFFF").place(x=600,y=50)
+label2=Label(root,text="Name",font=("Arial",24),bg="#0F2167",fg="#FFFFFF").place(x=400,y=200)
+label3=Label(root,text="Email Id",font=("Arial",24),bg="#0F2167",fg="#FFFFFF").place(x=400,y=340)
+label4=Label(root,text="Password",font=("Arial",24),bg="#0F2167",fg="#FFFFFF").place(x=400,y=500)
+entry1=Entry(root,font=('Arial',24),bg="#FFFFFF",borderwidth=3).place(x=600,y=200)
+entry2=Entry(root,font=('Arial',24),bg="#FFFFFF",borderwidth=3).place(x=600,y=340)
+entry3=Entry(root,font=('Arial',24),bg="#FFFFFF",borderwidth=3).place(x=600,y=500)
+pic=Image.open('pillayare2.jpeg')
+resized=pic.resize((150,150))
+newpic=ImageTk.PhotoImage(resized)
+piclab=Label(root,image=newpic,borderwidth=0,bg="#0F2167").place(x=20,y=20)
+b1=Button(root,text="Register",bg="#D9D9D9",font=("Arial",24),borderwidth=5,width=15,).place(x=640,y=650)
+root.mainloop()
